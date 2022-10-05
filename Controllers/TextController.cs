@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using StockAPI.Data;
 using StockAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using CsvHelper;
+using System.Globalization;
 
 namespace StockAPI.Controllers
 {
@@ -66,6 +68,41 @@ namespace StockAPI.Controllers
             };
             return Ok(result);
 
+        }
+        [HttpGet("csv")]
+        public async Task<IActionResult> GetTextsCsv()
+        {
+            
+            var texts = _context.Texts.Include(t => t.Author).Select(t => new
+            {
+                Id = t.Id,
+                Name = t.Name,
+                Text = t.TextInfo,
+                DateOfCreation = t.DateOfCreation,
+                Cost = t.Cost,
+                NameOfAuthor = t.Author.FirstName,
+                NicknameOfAuthor = t.Author.NickName,
+                NumberOfSales = t.NumberOfSales,
+                Rating = Math.Round(t.SumOfRatings / (t.NumOfReviews == 0 ? 1 : t.NumOfReviews), 2)
+            });
+            using (var ms = new MemoryStream())
+            {
+                using (var writer = new StreamWriter(ms))
+                using (var csvWriter = new CsvWriter(writer, CultureInfo.InvariantCulture, true))
+                {
+
+                    await csvWriter.WriteRecordsAsync(texts);
+                    writer.Flush();
+                    ms.Seek(0, SeekOrigin.Begin);
+                    //var fileStreamResult = new FileStreamResult(ms, "text/csv");
+                    //return fileStreamResult;
+
+                    return File(ms.ToArray(), "APPLICATION/octet-stream", "texts.csv");
+                }
+            }
+            
+              
+            
         }
         [HttpPost]
         public async Task<ActionResult<Text>> PostText(PostTextRequest textRequest)
@@ -168,9 +205,5 @@ namespace StockAPI.Controllers
 
             return NoContent();
         }
-
-        
-        
-
     }
 }

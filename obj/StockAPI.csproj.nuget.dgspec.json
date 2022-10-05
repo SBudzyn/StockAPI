@@ -53,6 +53,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "csvhelper": {
+              "target": "Package",
+              "version": "[28.0.1, )"
             }
           },
           "imports": [

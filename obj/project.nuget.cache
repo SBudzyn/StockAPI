@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5oYMOrurGQy1cpZzTku2lfWaiWMMLJFNxZwxwCmuelxXsKEe3j/8JpEL9mYtbObc7To0ADSZMHDCgL3nGN7gQg==",
+  "dgSpecHash": "IG4UKRxYHyUfyv4x/h13H/QlqEDsv/v3uVgNVaOQXN1PX2Pr/PR3KDTTtBZZyVymVZxT8ZlizGRn8T/MTYYwMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\LapStore\\OneDrive\\Рабочий стол\\Всякая херня\\StockAPI\\StockAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\LapStore\\.nuget\\packages\\csvhelper\\28.0.1\\csvhelper.28.0.1.nupkg.sha512",
     "C:\\Users\\LapStore\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\LapStore\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\LapStore\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

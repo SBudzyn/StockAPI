@@ -121,3 +121,4 @@ C:\Users\LapStore\OneDrive\Рабочий стол\Всякая херня\Stock
 C:\Users\LapStore\OneDrive\Рабочий стол\Всякая херня\StockAPI\obj\Debug\net6.0\ref\StockAPI.dll
 C:\Users\LapStore\OneDrive\Рабочий стол\Всякая херня\StockAPI\obj\Debug\net6.0\StockAPI.pdb
 C:\Users\LapStore\OneDrive\Рабочий стол\Всякая херня\StockAPI\obj\Debug\net6.0\StockAPI.genruntimeconfig.cache
+C:\Users\LapStore\OneDrive\Рабочий стол\Всякая херня\StockAPI\bin\Debug\net6.0\CsvHelper.dll
