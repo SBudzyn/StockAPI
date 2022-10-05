@@ -94,9 +94,7 @@ namespace StockAPI.Controllers
                     await csvWriter.WriteRecordsAsync(texts);
                     writer.Flush();
                     ms.Seek(0, SeekOrigin.Begin);
-                    //var fileStreamResult = new FileStreamResult(ms, "text/csv");
-                    //return fileStreamResult;
-
+                    
                     return File(ms.ToArray(), "APPLICATION/octet-stream", "texts.csv");
                 }
             }
