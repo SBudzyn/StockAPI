@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "m+d3Hk4uDitDrxuMe1+lLFopJxUuqFItih3Q1FCvJVE=",
+  "Source": "StockAPI",
+  "BasePath": "_content/StockAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StockAPI\\wwwroot",
+      "Source": "StockAPI",
+      "ContentRoot": "C:\\Users\\LapStore\\OneDrive\\Рабочий стол\\Всякая херня\\StockAPI\\wwwroot\\",
+      "BasePath": "_content/StockAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
